@@ -8,7 +8,7 @@ import { RouterLink } from '@angular/router';
   template: `
     <section class="hero">
       <h1>Professional Head Lice Treatment</h1>
-      <p>Safe, effective, and gentle solutions for the whole family</p>
+      <p>Safe, effective, and gentle solutions for the whole family, in Montenegro</p>
       <button routerLink="/contact">Book Treatment</button>
     </section>
 
