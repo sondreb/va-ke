@@ -12,11 +12,13 @@ import { ScrollService } from './services/scroll.service';
     <header>
       <div class="header-content">
         <div class="logo-container">
-          <img src="/icons/icon-1024x1024.png" alt="Vaške Logo" class="logo" />
-          <h1>Vaške Removal Service</h1>
+          <a routerLink="/" class="logo-link">
+            <img src="/icons/icon-1024x1024.png" alt="Vaške Logo" class="logo" />
+            <h1>Vaške Removal Service</h1>
+          </a>
         </div>
         <nav>
-          <a routerLink="/">Home</a>
+          <!-- <a routerLink="/">Home</a> -->
           <a routerLink="/services">Our Services</a>
           <a routerLink="/about">About Us</a>
           <a routerLink="/contact">Contact</a>
@@ -64,6 +66,14 @@ import { ScrollService } from './services/scroll.service';
     .logo {
       height: 50px;
       width: auto;
+    }
+
+    .logo-link {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      text-decoration: none;
+      color: inherit;
     }
 
     nav {
