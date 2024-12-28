@@ -60,10 +60,63 @@ import { RouterLink } from '@angular/router';
       background: var(--white);
       border-radius: 8px;
       box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      position: relative;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      overflow: visible;
+    }
+
+    .feature::before,
+    .feature::after {
+      content: '';
+      position: absolute;
+      border-radius: 8px;
+      inset: 0;
+      background: var(--primary-color);
+      opacity: 0;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+      z-index: -1;
+    }
+
+    .feature::before {
+      transform: rotate(-3deg) translateY(5px);
+    }
+
+    .feature::after {
+      transform: rotate(3deg) translateY(5px);
+    }
+
+    .feature:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    }
+
+    .feature:hover::before {
+      opacity: 0.1;
+      transform: rotate(-3deg) translateY(10px);
+    }
+
+    .feature:hover::after {
+      opacity: 0.05;
+      transform: rotate(3deg) translateY(10px);
     }
 
     .feature h3 {
       margin-bottom: 1rem;
+      position: relative;
+      transition: transform 0.3s ease;
+    }
+
+    .feature:hover h3 {
+      transform: scale(1.05);
+    }
+
+    .feature p {
+      position: relative;
+      transition: transform 0.3s ease;
+    }
+
+    .feature:hover p {
+      transform: translateY(2px);
     }
   `]
 })
