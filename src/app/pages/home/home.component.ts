@@ -30,21 +30,51 @@ import { RouterLink } from '@angular/router';
   styles: [`
     .hero {
       text-align: center;
-      padding: 4rem 1rem;
-      background-color: var(--light-bg);
-      border-radius: 8px;
-      margin-bottom: 2rem;
+      padding: 6rem 1rem;
+      background: var(--gradient-primary);
+      border-radius: var(--border-radius);
+      margin-bottom: 3rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(rgba(255,255,255,0.1), transparent);
+      pointer-events: none;
     }
 
     .hero h1 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
+      font-size: 3.5rem;
+      margin-bottom: 1.5rem;
+      color: var(--white);
+      text-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
 
     .hero p {
+      font-size: 1.4rem;
+      margin-bottom: 2.5rem;
+      color: var(--white);
+      opacity: 0.9;
+    }
+
+    .hero button {
+      background: var(--white);
+      color: var(--primary-color);
       font-size: 1.2rem;
-      margin-bottom: 2rem;
-      color: var(--text-color);
+      padding: 15px 40px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .hero button:hover {
+      background: var(--white);
+      color: var(--primary-dark);
     }
 
     .features {

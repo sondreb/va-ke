@@ -2,10 +2,16 @@
 
 :root {
   --primary-color: #2b8bc6;
+  --primary-dark: #1a6fa3;
   --secondary-color: #73c2fb;
   --text-color: #333333;
   --light-bg: #f5f9fc;
   --white: #ffffff;
+  --shadow-sm: 0 2px 4px rgba(0,0,0,0.05);
+  --shadow-md: 0 4px 6px rgba(0,0,0,0.07);
+  --shadow-lg: 0 10px 15px rgba(0,0,0,0.1);
+  --gradient-primary: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  --border-radius: 12px;
 }
 
 body {
@@ -22,20 +28,68 @@ body {
 
 button {
   font-size: 16px;
-  padding: 12px 24px;
-  background-color: var(--primary-color);
+  padding: 12px 28px;
+  background: var(--gradient-primary);
   color: var(--white);
   border: none;
-  border-radius: 6px;
+  border-radius: var(--border-radius);
   cursor: pointer;
-  transition: all 0.2s ease;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, Roboto,
-    "Helvetica Neue", Arial, sans-serif;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
 }
 
 button:hover {
-  background-color: var(--secondary-color);
-  transform: translateY(-1px);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+button::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(255,255,255,0.2), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+button:hover::after {
+  opacity: 1;
+}
+
+.card {
+  background: var(--white);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-2px);
+}
+
+input, textarea {
+  border-radius: 8px;
+  border: 2px solid #eee;
+  padding: 12px;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+input:focus, textarea:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(43, 139, 198, 0.1);
+  outline: none;
 }
 
 h1, h2, h3 {
