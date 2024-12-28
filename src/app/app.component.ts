@@ -65,7 +65,9 @@ import { ScrollService } from './services/scroll.service';
 
     .logo {
       height: 50px;
-      width: auto;
+      width: 50px; /* Add fixed width to ensure perfect circle */
+      border-radius: 50%;
+      object-fit: cover; /* Ensures the image fills the circular space properly */
     }
 
     .logo-link {
