@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { RouterOutlet, RouterLink } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { ScrollService } from './services/scroll.service';
 
 @Component({
   selector: 'app-root',
@@ -47,7 +48,7 @@ import { FormsModule } from '@angular/forms';
     }
 
     .header-content {
-      max-width: 1200px;
+      max-width: 1000px;
       margin: 0 auto;
       display: flex;
       justify-content: space-between;
@@ -82,7 +83,7 @@ import { FormsModule } from '@angular/forms';
     }
 
     main {
-      max-width: 1200px;
+      max-width: 1000px;
       margin: 2rem auto;
       padding: 0 1rem;
       min-height: calc(100vh - 200px);
@@ -117,6 +118,8 @@ import { FormsModule } from '@angular/forms';
 export class AppComponent implements OnInit {
   deferredPrompt: any;
   showInstallButton = false;
+
+  constructor(private scrollService: ScrollService) {}
 
   ngOnInit() {
     window.addEventListener('beforeinstallprompt', (e) => {

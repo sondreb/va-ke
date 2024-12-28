@@ -12,7 +12,7 @@ import { FormsModule } from '@angular/forms';
       <div class="contact-info">
         <h2>Get in Touch</h2>
         <!-- <p>📞 Phone: (555) 123-4567</p>-->
-        <p>📧 Email: butatiana&amp;gmail.com</p>
+        <p>📧 Email: butatiana&#64;gmail.com</p>
         <p>📍 Location: Bar, Montenegro</p>
         <p>⏰ Hours: Mon-Fri: 9am-6pm</p>
       </div>
