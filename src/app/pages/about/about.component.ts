@@ -32,7 +32,7 @@ import { Component } from '@angular/core';
             <ul>
               <li>Head Lice Removal Specialist</li>
               <li>Expert in Natural Treatment Methods</li>
-              <li>English, Russian and Norwegian</li>
+              <li>English, Russian, French and Norwegian</li>
             </ul>
           </div>
         </div>
