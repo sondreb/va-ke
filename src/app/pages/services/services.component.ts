@@ -10,13 +10,13 @@ import { Component } from '@angular/core';
       <div class="service-card">
         <h2>Initial Consultation</h2>
         <p>Complete head check and treatment plan</p>
-        <p class="price">$50</p>
+        <p class="price">$15</p>
       </div>
 
       <div class="service-card">
         <h2>Full Treatment</h2>
         <p>Thorough removal and preventive care</p>
-        <p class="price">$150</p>
+        <p class="price">$110</p>
       </div>
 
       <div class="service-card">
@@ -28,7 +28,7 @@ import { Component } from '@angular/core';
       <div class="service-card">
         <h2>Follow-up Check</h2>
         <p>Post-treatment verification</p>
-        <p class="price">$30</p>
+        <p class="price">$15</p>
       </div>
     </div>
   `,
