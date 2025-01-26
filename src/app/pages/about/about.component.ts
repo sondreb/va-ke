@@ -32,7 +32,7 @@ import { Component } from '@angular/core';
             <ul>
               <li>Head Lice Removal Specialist</li>
               <li>Expert in Natural Treatment Methods</li>
-              <li>English, Russian, French and Norwegian</li>
+              <li>English, Russian, French and basic Montenegrin</li>
             </ul>
           </div>
         </div>
@@ -42,7 +42,7 @@ import { Component } from '@angular/core';
       <div class="why-us">
         <h2>Why Choose Us?</h2>
         <ul>
-          <li>Natural, chemical-free treatments</li>
+          <li>Chemical free treatment on demand.</li>
           <li>Experienced specialists</li>
           <li>Guaranteed results</li>
           <li>Comfortable, private setting</li>
